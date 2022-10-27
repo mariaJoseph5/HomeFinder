@@ -1,0 +1,24 @@
+
+<input type="text" [(ngModel)]="item">
+<button (click)="search()" class="btn btn-secondary">Search</button>
+<br>
+<br>
+<div *ngIf="value" class="transaction-wrapper">
+    <label  >Please enter the ampunt</label>
+    <input type="text"  [(ngModel)]="amount">
+    <button (click)="transact()" class="btn btn-secondary">Transact</button> 
+</div>
+<h1 *ngIf="!value" >User Not Found</h1>
+
+<div id="cointainer">
+    <ul>
+        <li *ngFor="let user of listOfUsers">
+            <!-- {{user.userId}}
+            {{user.UserName}}
+            {{user.Balance}}
+            {{user.AccountNo}}
+            {{user.IFSC}} -->
+            <app-transaction [item1]="user"></app-transaction>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,23 @@
+[
+{
+        "userId":"1",
+        "UserName":"Shikhar",
+        "Balance":1000,
+        "AccountNo":"xxxxxxxx7856",
+        "IFSC":"SCBRYTDGG"
+    },
+    {
+        "userId":"2",
+        "UserName":"Christeen",
+        "Balance":7000000,
+        "AccountNo":"xxxxxxxx8756",
+        "IFSC":"HDFCRYTDGG"
+    },
+    {
+        "userId":"3",
+        "UserName":"Sarabpreet",
+        "Balance":5000,
+        "AccountNo":"xxxxxxxx8756",
+        "IFSC":"SBIRYTDGG"
+    }
+]
