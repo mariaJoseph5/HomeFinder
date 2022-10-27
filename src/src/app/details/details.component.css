@@ -1,0 +1,13 @@
+.transaction-wrapper{
+    padding:20px;
+    border:1px solid black;
+    display:flex;
+    justify-content: space-around;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    padding:10px;
+}

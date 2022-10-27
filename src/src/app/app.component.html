@@ -1,0 +1,12 @@
+<div id="cointainer">
+  <button class="btn btn-secondary" (click)="onclick()"> Check Details</button>
+</div>
+
+
+
+<div class="app-details-wrapper">
+  <app-details (newItemEvent)="displayAlert($event)" *ngIf="value"></app-details>
+</div>
+
+
+

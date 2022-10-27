@@ -1,0 +1,19 @@
+button{
+    margin-top: 2px;
+    margin-left: 10px;
+}
+#cointainer{
+    margin:auto;
+    border:6px solid black;
+    width:150px;
+    height:100px;
+    padding: auto;
+}
+#transaction{
+    height:200px;
+    width:200px;
+    border:1px solid black;
+}
+.app-details-wrapper{
+    padding:10px;
+}
