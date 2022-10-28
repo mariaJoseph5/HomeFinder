@@ -1,0 +1,14 @@
+<div>
+  <app-heading (openPopup)="openAddPopup($event)"></app-heading>
+</div>
+<div class="wrapper-container">
+  <div class="nav-wrapper">
+  <app-left-nav></app-left-nav>
+  </div>
+  <div class="main-container">
+    <app-card-container (openDelPopup)="openDelPopup($event)"></app-card-container>
+  </div>
+</div>
+<app-delete *ngIf="isDeletePopupOpen" [idValue]="propertyId" (closeDelPopup)="openDelPopup($event)"></app-delete>
+<app-add *ngIf="isAddPopupOpen" (closePopup)="openAddPopup($event)"></app-add>
+<app-notification *ngIf="isNotificationVisible" (closeNotification)="closeNotification()" [messageToDisplay]="messageToDisplay"></app-notification>

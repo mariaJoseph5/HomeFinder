@@ -1,0 +1,21 @@
+:host{
+  position: relative;
+}
+.main-container {
+  display: flex;
+  flex-basis: 75%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.wrapper-container {
+  display: flex;
+}
