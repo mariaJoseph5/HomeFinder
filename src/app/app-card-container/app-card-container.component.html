@@ -1,0 +1,27 @@
+<div class="nav-container">
+  <div class="img-wrapper" *ngFor="let data of propertyData; let indexOfElement = index;">
+    <img class="img" [src]="fetchUrl(indexOfElement + 1)">
+    <div class="card-container">
+      <div class="card bold">
+        <p>{{data?.propertyName}}, {{data?.area}}</p>
+      </div>
+      <div class="card">
+        <p>PRICE: $ {{data?.price}}</p>
+      </div>
+      <div class="card">
+        <p>AREA SIZE: {{data?.areaSize}} SQFT</p>
+      </div>
+      <div class="flex-wrapper">
+        <div class="mini">
+          <p>POOL: {{data?.pool}}</p>
+          <p>GYM: {{data?.gym}}</p>
+          <p>PLAY AREA: {{data?.playArea}}</p>
+          <p>CLUB HOUSE: {{data?.clubHouse}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="button-heading" (click)="callPopup(data?.propertyId)"><button class="button">DELETE PROPERTY</button></div>
+      </div>
+    </div>
+  </div>
+</div>

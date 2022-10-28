@@ -1,0 +1,20 @@
+<div class="modal-wrapper">
+  <div class="container">
+    <div class="heading">
+      <p>ADD A NEW PROPERTY</p>
+    </div>
+    <form [formGroup]="propertyGroup">
+        <input class="input" type="text" formControlName="propertyName" name="name" placeholder="PROPERTY NAME">
+        <input class="input" type="number" formControlName="price" name="price" placeholder="PRICE">
+        <input class="input" type="text" formControlName="area" name="area" placeholder="AREA">
+        <input class="input" type="number" formControlName="areaSize" name="size" placeholder="AREA SIZE">
+        <input class="input" type="number" formControlName="pool" name="pool" placeholder="POOL">
+        <input class="input" type="number" formControlName="gym" name="pool" placeholder="GYM">
+        <input class="input" type="number" formControlName="playArea" name="play" placeholder="PLAY AREA">
+        <input class="input" type="number" formControlName="clubHouse" name="play" placeholder="CLUB HOUSE">
+        <div class="button-heading">
+          <button type="submit" class="button" (click)="submitForm()">SUBMIT</button>
+        </div>
+    </form>
+  </div>
+</div>
