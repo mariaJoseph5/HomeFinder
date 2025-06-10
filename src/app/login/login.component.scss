@@ -1,0 +1,47 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100%;
+  padding: 200px;
+
+  input {
+    width: 50%;
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid #7b68ee;
+    border-radius: 4px;
+  }
+
+  .custom-button {
+    background-color: #7b68ee;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .disable-button {
+    background-color: lightslategray;
+    pointer-events: none;
+  }
+}
+
+.custom-icon {
+  color: #7b68ee;
+}
+
+span {
+  color: darkred;
+}
+
+:host {
+  display: flex;
+  flex-basis: 100%;
+}

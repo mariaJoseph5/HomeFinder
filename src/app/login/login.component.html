@@ -1,0 +1,9 @@
+<form [formGroup]="loginForm" (ngSubmit)="loginFunc()">
+  <fa-icon [icon]="faUser" size="10x" class="custom-icon"></fa-icon>
+  <input type="text" placeholder="User Name" formControlName="userName">
+  <input type="text" placeholder="Password" formControlName="password">
+  <button type="submit" class="custom-button" [class.disable-button]="!loginForm.valid">Login</button>
+  <span *ngIf="!isLoggedIn && hasAttemptedLogin">
+  {{ errorMessage }}
+</span>
+</form>

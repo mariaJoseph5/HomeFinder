@@ -1,29 +1,13 @@
 <div class="nav-wrapper">
   <div class="side-nav">
     <div class="data-wrapper">
-      <div class="data-line">
-        <p class="data">HOME</p>
-        <i class="fa fa-home"></i>
-      </div>
-      <div class="data-line">
-        <p class="data">SEARCH FOR A PROPERTY</p>
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="data-line">
-        <p class="data">VIEW FAVOURITES</p>
-        <i class="fa fa-star"></i>
-      </div>
-      <div class="data-line">
-        <p class="data">LOGIN</p>
-        <i class="fa fa-sign-in"></i>
-      </div>
-      <div class="data-line">
-        <p class="data">ABOUT US</p>
-        <i class="fa fa-address-card"></i>
-      </div>
-      <div class="data-line">
-        <p class="data">CONTACT US</p>
-        <i class="fa fa-phone"></i>
+      <div class="data-line" *ngFor="let item of listOfNavItems" [class.selected]="selected == item?.heading"
+           (click)="updateNav(item.heading)">
+        <ng-container *ngIf="(!item?.isLoggedInRoute && !isLoggedIn) || (isLoggedIn && item?.heading != 'LOGIN')"><p
+          class="data">{{ item?.heading }}</p>
+          <fa-icon [icon]="item?.type" size="lg" class="custom-icon"></fa-icon>
+        </ng-container>
       </div>
     </div>
   </div>
+</div>

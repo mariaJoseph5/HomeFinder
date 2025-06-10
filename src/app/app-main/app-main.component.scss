@@ -1,21 +1,28 @@
-:host{
-  position: relative;
-}
-.main-container {
-  display: flex;
-  flex-basis: 75%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-basis: 25%;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
 .wrapper-container {
   display: flex;
+  flex-basis: 100%;
+  height: 100%;
+  flex-grow: 1;
+
+  > app-left-nav {
+    flex-basis: 20%;
+    display: flex;
+  }
+
+  > div {
+    flex-basis: 80%;
+    display: flex;
+  }
+}
+
+:host {
+  height: 100%;
+}
+
+.router-container {
+  height: 100%;
+}
+
+.overall-wrapper-container {
+  height: 100%;
 }

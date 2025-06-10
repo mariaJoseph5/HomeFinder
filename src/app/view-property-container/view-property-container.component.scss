@@ -1,0 +1,153 @@
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 20px 100px;
+  flex-basis: 100%;
+}
+
+.img-wrapper {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  height: 200px;
+  width: 250px;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.data-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.data {
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.card {
+  color: #6a5acd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-basis: 33%;
+}
+
+.img-wrapper {
+  border: 2px solid #6a5acd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+
+  p {
+    margin: 0.2em;
+  }
+}
+
+.mini {
+  font-size: 12px;
+  color: #6a5acd;
+  padding: 15px;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.button {
+  background-color: #6a5acd;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.button-heading {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  > * {
+    margin: 0 30px;
+  }
+
+  > *:hover {
+    cursor: pointer;
+  }
+}
+
+.favourite {
+  color: darkred;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 100px;
+  width: 100%;
+  margin: 40px;
+
+  input {
+    background-color: white;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .container-class {
+    width: 50%;
+    border: 2px solid #7b68ee;
+  }
+
+  .custom-icon {
+    color: #7b68ee;
+  }
+
+  .custom-icon:hover {
+    cursor: pointer;
+  }
+}
+
+:host {
+  width: 100%;
+}

@@ -1,4 +1,4 @@
-:host{
+:host {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -10,8 +10,9 @@
   height: 100%;
   overflow: auto;
 }
-.wrapper{
-  background-color: rgb(178,34,34);
+
+.wrapper {
+  background-color: rgb(178, 34, 34);
   height: 50px;
   padding: 30px 50px;
   color: white;

@@ -1,6 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {ActivatedRoute, Router } from '@angular/router';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ActivatedRoute, NavigationEnd, Router} from '@angular/router';
+import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-heading',
@@ -9,12 +9,21 @@ import {ActivatedRoute, Router } from '@angular/router';
 })
 export class AppHeadingComponent implements OnInit {
   @Output() openPopup: EventEmitter<any> = new EventEmitter();
+  isLoggedIn = false;
 
-  constructor(private httpClient: HttpClient, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
+      if (event.url.includes('loggedIn')) {
+        this.isLoggedIn = true;
+      }
+    });
+  }
 
   ngOnInit(): void {
+
   }
-  callPopup(){
-    this.openPopup.emit({openPopup: true});
+
+  callPopup() {
+    this.router.navigate([{outlets: {modal: ['add-property']}}], {relativeTo: this.activatedRoute});
   }
 }

@@ -1,0 +1,37 @@
+h1 {
+  font-weight: bolder;
+  font-size: larger;
+  color: #7f7fe6;
+}
+
+.overall-wrapper {
+  padding: 40px;
+  margin: 20px;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  border-bottom: 1px solid #7f7fe6;
+}
+
+p {
+  margin: 0.2rem 2rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.2rem 2rem;
+}
+
+.custom-list li::before {
+  content: "✓";
+  margin-right: 16px;
+}
+
+.custom-icon {
+  color: #7f7fe6;
+}

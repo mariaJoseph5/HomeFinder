@@ -1,0 +1,37 @@
+<div class="search-bar" *ngIf="typeOfFeature == 'search'">
+  <div class="container-class">
+    <input type="text" placeholder="Search..." name="search" [(ngModel)]="searchParam"
+           (ngModelChange)="search(searchParam)">
+    <fa-icon [icon]="faSearch" size="lg" class="custom-icon"></fa-icon>
+  </div>
+</div>
+<div class="nav-container">
+  <div class="img-wrapper" *ngFor="let data of propertyData; let indexOfElement = index;">
+    <img class="img" [src]="data?.imageUrl" alt="{{data?.propertyName}}">
+    <div class="card-container">
+      <div class="card bold">
+        <p>{{ data?.propertyName }}, {{ data?.area }}</p>
+      </div>
+      <div class="card">
+        <p>PRICE: {{ data?.price | currency }} </p>
+      </div>
+      <div class="card">
+        <p>AREA SIZE: {{ data?.areaSize }} SQFT</p>
+      </div>
+      <div class="flex-wrapper">
+        <div class="mini">
+          <p>POOL: {{ data?.pool }}</p>
+          <p>GYM: {{ data?.gym }}</p>
+          <p>PLAY AREA: {{ data?.playArea }}</p>
+          <p>CLUB HOUSE: {{ data?.clubHouse }}</p>
+        </div>
+      </div>
+      <div *ngIf="isLoggedIn && typeOfFeature!='search'" class="card">
+        <div class="button-heading" *ngFor="let item of iconItems" (click)="callPopup(item, data?.propertyId)">
+          <fa-icon [icon]="item" size="2x" class="custom-icon"
+                   [class.favourite]="item == iconItems[1] && data?.isFavourite =='YES'"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

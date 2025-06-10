@@ -1,14 +1,14 @@
-<div>
-  <app-heading (openPopup)="openAddPopup($event)"></app-heading>
-</div>
-<div class="wrapper-container">
-  <div class="nav-wrapper">
-  <app-left-nav></app-left-nav>
+<div class="overall-wrapper-container">
+  <div>
+    <app-heading></app-heading>
   </div>
-  <div class="main-container">
-    <app-card-container (openDelPopup)="openDelPopup($event)"></app-card-container>
+  <div class="wrapper-container">
+    <app-left-nav></app-left-nav>
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
-<app-delete *ngIf="isDeletePopupOpen" [idValue]="propertyId" (closeDelPopup)="openDelPopup($event)"></app-delete>
-<app-add *ngIf="isAddPopupOpen" (closePopup)="openAddPopup($event)"></app-add>
-<app-notification *ngIf="isNotificationVisible" (closeNotification)="closeNotification()" [messageToDisplay]="messageToDisplay"></app-notification>
+<router-outlet name="modal"></router-outlet>
+<app-notification *ngIf="isNotificationVisible" [messageToDisplay]="messageToDisplay"
+                  (closeNotification)="closeNotification()"></app-notification>

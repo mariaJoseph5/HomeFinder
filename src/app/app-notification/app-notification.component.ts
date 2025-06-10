@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {AppService} from "../app-service.service";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-notification',
@@ -7,13 +6,15 @@ import {AppService} from "../app-service.service";
   styleUrls: ['./app-notification.component.scss']
 })
 export class AppNotificationComponent implements OnInit {
-  @Input() messageToDisplay:any;
+  @Input() messageToDisplay: any;
   @Output() closeNotification: EventEmitter<any> = new EventEmitter();
-  constructor(private appService: AppService) { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
-    let scope = this;
-    setTimeout(function () {
+    const scope = this;
+    setTimeout(() => {
       scope.closeNotification.emit(true);
     }, 3000);
   }

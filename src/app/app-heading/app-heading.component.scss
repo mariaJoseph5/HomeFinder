@@ -1,34 +1,27 @@
 .p-wrapper {
   width: 100%;
   font-size: 24px;
-  color: darkblue;
+  color: #7b68ee;
   font-family: sans-serif;
   font-weight: bold;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  border-bottom: 3px solid darkblue;
+  border-bottom: 3px solid #7b68ee;
 }
 
 .input {
   background-color: transparent;
-  color: darkblue;
+  color: #7b68ee;
   outline: none;
   outline-style: none;
   border-top: none;
   border-left: none;
   border-right: none;
   margin: 0 5px;
-  border-bottom: solid darkblue 2px;
+  border-bottom: solid #7b68ee 2px;
   padding: 3px 10px;
-}
-
-.search-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .p-heading {
@@ -36,7 +29,7 @@
 }
 
 .button {
-  background-color: darkblue;
+  background-color: #7b68ee;
   border: none;
   color: white;
   outline: none;

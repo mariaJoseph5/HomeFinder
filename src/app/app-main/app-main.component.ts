@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {AppService} from "../app-service.service";
+import {Component, OnInit} from '@angular/core';
+import {DataService} from '../data/data-service.service';
 
 @Component({
   selector: 'app-main',
@@ -8,27 +8,20 @@ import {AppService} from "../app-service.service";
 })
 export class AppMainComponent implements OnInit {
 
-  isDeletePopupOpen = false;
   isNotificationVisible = false;
   messageToDisplay = '';
-  propertyId = '';
-  isAddPopupOpen = false;
-  constructor(private appService: AppService) { }
+
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit(): void {
-    this.appService.showNotification$.subscribe((value) => {
+    this.dataService.showNotification$.subscribe((value) => {
       this.isNotificationVisible = true;
       this.messageToDisplay = value.error;
     });
   }
-  openAddPopup(value: any){
-    this.isAddPopupOpen = value.openPopup;
-  }
-  openDelPopup(value: any){
-    this.isDeletePopupOpen = value.openPopup;
-    this.propertyId = value.idValue;
-  }
-  closeNotification(){
+
+  closeNotification() {
     this.messageToDisplay = '';
     this.isNotificationVisible = false;
   }

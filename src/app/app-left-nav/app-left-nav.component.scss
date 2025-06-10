@@ -8,26 +8,26 @@
 .p-wrapper {
   width: 100%;
   font-size: 24px;
-  color: darkblue;
+  color: #7b68ee;
   font-family: sans-serif;
   font-weight: bold;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  border-bottom: 3px solid darkblue;
+  border-bottom: 3px solid #7b68ee;
 }
 
 .input {
   background-color: transparent;
-  color: darkblue;
+  color: lavender;
   outline: none;
   outline-style: none;
   border-top: none;
   border-left: none;
   border-right: none;
   margin: 0 5px;
-  border-bottom: solid darkblue 2px;
+  border-bottom: solid #7b68ee 2px;
   padding: 3px 10px;
 }
 
@@ -58,7 +58,7 @@
   flex-basis: 70%;
 }
 
-.img-wrapper  {
+.img-wrapper {
   padding: 50px 20px;
   height: 200px;
   width: 250px;
@@ -70,7 +70,7 @@
 }
 
 .button {
-  background-color: darkblue;
+  background-color: #7b68ee;
   border: none;
   color: white;
   outline: none;
@@ -89,19 +89,21 @@
 .nav-wrapper {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 100%;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
 .side-nav {
-  background-color: darkblue;
+  background-color: #7b68ee;
   color: white;
   display: flex;
   flex-grow: 1;
+  height: 100%;
 }
 
 .data-wrapper {
-  padding: 100px 20px 555px 20px;
+  padding: 100px 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -113,11 +115,20 @@
 }
 
 .card {
-  border: 2px solid darkblue;
-  color: darkblue;
+  border: 2px solid #7b68ee;
+  color: lavender;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-grow: 1;
+}
+
+.selected {
+  color: yellow;
+}
+
+.data-line:hover {
+  color: yellow;
+  cursor: pointer;
 }
